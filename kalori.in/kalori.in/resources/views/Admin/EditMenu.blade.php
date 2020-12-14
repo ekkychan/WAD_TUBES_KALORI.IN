@@ -4,12 +4,12 @@
     <h2>Update Menu</h2>
 </div>
 <form action="{{ route('menu.update',$menu->id) }}" method="post" enctype="multipart/form-data">
-    @csrf 
+    @csrf
     @method('patch')
     <div class="form-group">
         <label for="exampleFormControlInput1">Paket</label>
-        <select class="form-control" name="paket" value="{{$menu->paket}}>
-            <option value="Paket A">Paket A</option>
+        <select class="form-control" name="paket" value="{{$menu->paket}}">
+            <option value=" Paket A">Paket A</option>
             <option value="Paket B">Paket B</option>
             <option value="Paket C">Paket C</option>
         </select>
@@ -21,7 +21,8 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="validatedInputGroupPrepend">Rp</span>
                 </div>
-                <input type="number" name="harga" value="{{$menu->harga}}" class="form-control" aria-describedby="validatedInputGroupPrepend" required>
+                <input type="number" name="harga" value="{{$menu->harga}}" class="form-control"
+                    aria-describedby="validatedInputGroupPrepend" required>
             </div>
         </div>
     </div>
@@ -37,11 +38,13 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Lunch</label>
-        <textarea class="form-control" name='senin_lunch' id="exampleFormControlTextarea1" rows="3">{{$menu->senin_lunch}}</textarea>
+        <textarea class="form-control" name='senin_lunch' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->senin_lunch}}</textarea>
     </div>
     <div class="form-group mb-2">
         <label for="exampleFormControlInput1">Dinner</label>
-        <textarea class="form-control" name='senin_dinner' id="exampleFormControlTextarea1" rows="3">{{$menu->senin_dinner}}</textarea>
+        <textarea class="form-control" name='senin_dinner' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->senin_dinner}}</textarea>
     </div>
 
     <div class="text-center border-bottom mt-3">
@@ -49,11 +52,13 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Lunch</label>
-        <textarea class="form-control" name='selasa_lunch' id="exampleFormControlTextarea1" rows="3">{{$menu->selasa_lunch}}</textarea>
+        <textarea class="form-control" name='selasa_lunch' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->selasa_lunch}}</textarea>
     </div>
     <div class="form-group mb-2">
         <label for="exampleFormControlInput1">Dinner</label>
-        <textarea class="form-control" name='selasa_dinner' id="exampleFormControlTextarea1" rows="3">{{$menu->selasa_dinner}}</textarea>
+        <textarea class="form-control" name='selasa_dinner' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->selasa_dinner}}</textarea>
     </div>
 
     <div class="text-center border-bottom mt-3">
@@ -61,11 +66,13 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Lunch</label>
-        <textarea class="form-control" name='rabu_lunch' id="exampleFormControlTextarea1" rows="3">{{$menu->rabu_lunch}}</textarea>
+        <textarea class="form-control" name='rabu_lunch' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->rabu_lunch}}</textarea>
     </div>
     <div class="form-group mb-2">
         <label for="exampleFormControlInput1">Dinner</label>
-        <textarea class="form-control" name='rabu_dinner' id="exampleFormControlTextarea1" rows="3">{{$menu->rabu_dinner}}</textarea>
+        <textarea class="form-control" name='rabu_dinner' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->rabu_dinner}}</textarea>
     </div>
 
     <div class="text-center border-bottom mt-3">
@@ -73,11 +80,13 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Lunch</label>
-        <textarea class="form-control" name='kamis_lunch' id="exampleFormControlTextarea1" rows="3">{{$menu->kamis_lunch}}</textarea>
+        <textarea class="form-control" name='kamis_lunch' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->kamis_lunch}}</textarea>
     </div>
     <div class="form-group mb-2">
         <label for="exampleFormControlInput1">Dinner</label>
-        <textarea class="form-control" name='kamis_dinner' id="exampleFormControlTextarea1" rows="3">{{$menu->kamis_dinner}}</textarea>
+        <textarea class="form-control" name='kamis_dinner' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->kamis_dinner}}</textarea>
     </div>
 
     <div class="text-center border-bottom mt-3">
@@ -85,11 +94,13 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Lunch</label>
-        <textarea class="form-control" name='jumat_lunch' id="exampleFormControlTextarea1" rows="3">{{$menu->jumat_lunch}}</textarea>
+        <textarea class="form-control" name='jumat_lunch' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->jumat_lunch}}</textarea>
     </div>
     <div class="form-group mb-2">
         <label for="exampleFormControlInput1">Dinner</label>
-        <textarea class="form-control" name='jumat_dinner' id="exampleFormControlTextarea1" rows="3">{{$menu->jumat_dinner}}</textarea>
+        <textarea class="form-control" name='jumat_dinner' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->jumat_dinner}}</textarea>
     </div>
 
     <div class="text-center border-bottom mt-3">
@@ -97,11 +108,13 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Lunch</label>
-        <textarea class="form-control" name='sabtu_lunch' id="exampleFormControlTextarea1" rows="3">{{$menu->sabtu_lunch}}</textarea>
+        <textarea class="form-control" name='sabtu_lunch' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->sabtu_lunch}}</textarea>
     </div>
     <div class="form-group mb-2">
         <label for="exampleFormControlInput1">Dinner</label>
-        <textarea class="form-control" name='sabtu_dinner' id="exampleFormControlTextarea1" rows="3">{{$menu->sabtu_dinner}}</textarea>
+        <textarea class="form-control" name='sabtu_dinner' id="exampleFormControlTextarea1"
+            rows="3">{{$menu->sabtu_dinner}}</textarea>
     </div>
 
     <div class="form-group">
