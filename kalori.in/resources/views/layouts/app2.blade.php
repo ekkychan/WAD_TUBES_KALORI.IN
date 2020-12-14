@@ -24,7 +24,7 @@
 <body>
     <nav class="navbar navbar-expand-md bg-custom">
         <!-- Links -->
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ url('/home') }}">
             <img src="css/Kalori.in webf.png" width="120" height="35">
         </a>
 
@@ -47,19 +47,10 @@
         @else
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">BMI Calculator</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="">Activity</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="">Nutrion</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="">Information</a>
+                <a class="nav-link" href="/AddMenu">Add Menu</a>
             </li>
         </ul>
         </div>

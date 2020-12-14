@@ -103,7 +103,6 @@
                     <p>Helps you tell the nutrition you need every day</p>
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -125,27 +124,26 @@
         <br>
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach($menus as $index=>$menu)
                 <div class="col">
                     <div class="card text-center">
                         <img src="images/Egg and Greens Bowl.jpg" class="card-img-top" height="400px" alt="...">
-                        <h3 style="color:white"><b>Paket A</b></h3>
-                        <p style="color:white"><b>Rp.559.000</b></p>
+                        <h3><b>{{$menu->paket}}</b></h3>
+                        <p><b>Rp. {{ number_format($menu->harga,0,",",".") }}</b></p>
                         <div class="card-body">
                             <!-- Button trigger modal -->
-                            <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#menu{{$index}}">
                                 Detail
                             </button>
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            <div class="modal fade" id="menu{{$index}}" tabindex="-1" aria-labelledby="exampleModalLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                         <div class="modal-header">
-                                            <h4 class="modal-title col-md-12 col-sm-12 " id="exampleModalLabel">
-                                                Paket A</h4>
-
+                                            <h4 class="modal-title col-md-12 col-sm-12 " id="exampleModalLabel">{{$menu->paket}}</h4>
                                         </div>
                                         <div class="modal-body">
                                             <div class="card-group">
@@ -153,24 +151,18 @@
                                                     <div class="card-body">
                                                         <h5 class="card-title buttonMenu">SENIN</h5>
                                                         <p class="card-text"><u>LUNCH</u></p>
-                                                        <p>Ayam Woku with Uduk Red Rice + FREE Bakwan Jagung Bites
-                                                        </p>
+                                                        <p>{!! nl2br($menu->senin_lunch) !!}</p>
                                                         <p class="card-text"><u>DINNER</u></p>
-                                                        <p>Gindara Cacciatore with Garlic Pasta + FREE Caramelized
-                                                            Onion
-                                                            Pizza</p>
+                                                        <p>{!! nl2br($menu->senin_dinner) !!}</p>
                                                     </div>
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <h5 class="card-title buttonMenu">SELASA</h5>
                                                         <p class="card-text"><u>LUNCH</u></p>
-                                                        <p>Fish Lodeh with Shallot Red Rice + FREE Martabak Telur
-                                                        </p>
+                                                        <p>{!! nl2br($menu->selasa_lunch) !!}</p>
                                                         <p class="card-text"><u>DINNER</u></p>
-                                                        <p>Thai Green Curry Chicken with Tom Yum Fried Rice + FREE
-                                                            Spicy
-                                                            Thai Cauliflower</p>
+                                                        <p>{!! nl2br($menu->selasa_dinner) !!}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -179,21 +171,18 @@
                                                     <div class="card-body">
                                                         <h5 class="card-title buttonMenu">RABU</h5>
                                                         <p class="card-text"><u>LUNCH</u></p>
-                                                        <p>Baked Chicken with BBQ Sauce and Caramelized Onion Pasta
-                                                            + FREE
-                                                            Cheesy Marinara Eggplant</p>
+                                                        <p>{!! nl2br($menu->rabu_lunch) !!}</p>
                                                         <p class="card-text"><u>DINNER</u></p>
-                                                        <p>Fish Kabayaki with Japanese Brown Rice + FREE Corn Mayo
-                                                        </p>
+                                                        <p>{!! nl2br($menu->rabu_dinner) !!}</p>
                                                     </div>
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <h5 class="card-title buttonMenu">KAMIS</h5>
                                                         <p class="card-text"><u>LUNCH</u></p>
-                                                        <p>Ayam Lodho with Lontong Beras Merah + FREE Tahu Opor</p>
+                                                        <p>{!! nl2br($menu->kamis_lunch) !!}</p>
                                                         <p class="card-text"><u>DINNER</u></p>
-                                                        <p>Buttermilk Chicken with Corn Frittata + FREE Coleslow</p>
+                                                        <p>{!! nl2br($menu->kamis_dinner) !!}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -202,22 +191,18 @@
                                                     <div class="card-body">
                                                         <h5 class="card-title buttonMenu">JUM'AT</h5>
                                                         <p class="card-text"><u>LUNCH</u></p>
-                                                        <p>Korean Gochujang Chicken with Korean Rice n Bean + FREE
-                                                            Odeng</p>
+                                                        <p>{!! nl2br($menu->jumat_lunch) !!}</p>
                                                         <p class="card-text"><u>DINNER</u></p>
-                                                        <p>Beef Quesadilas + FREE Potato Skins</p>
+                                                        <p>{!! nl2br($menu->jumat_dinner) !!}</p>
                                                     </div>
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <h5 class="card-title buttonMenu">SABTU</h5>
                                                         <p class="card-text"><u>LUNCH</u></p>
-                                                        <p>Chicken Nanban with Japanese Fried Rice + FREE Kung Pao
-                                                            Cauliflower</p>
+                                                        <p>{!! nl2br($menu->sabtu_lunch) !!}</p>
                                                         <p class="card-text"><u>DINNER</u></p>
-                                                        <p>Baked Fish with Sweet Corn Salsa and Marinara Pasta +
-                                                            FREE
-                                                            Tortila Chips</p>
+                                                        <p>{!! nl2br($menu->sabtu_dinner) !!}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -233,231 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card text-center">
-                        <img src="images/Sprouted Flourless Bread.jpg" class="card-img-top" height="400px" alt="...">
-                        <h3 style="color:white"><b>Paket B</b></h3>
-                        <p style="color:white"><b>Rp.559.000</b></p>
-                        <div class="card-body">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="button" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal1">Detail</button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                        <div class="modal-header">
-                                            <h5 class="modal-title col-md-12 col-sm-12" id="exampleModalLabel">Paket
-                                                B</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="modal-body">
-                                                <div class="card-group">
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">SENIN</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Ayam Woku with Uduk Red Rice + FREE Bakwan Jagung
-                                                                Bites</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Gindara Cacciatore with Garlic Pasta + FREE
-                                                                Caramelized Onion
-                                                                Pizza</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">SELASA</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Fish Lodeh with Shallot Red Rice + FREE Martabak
-                                                                Telur</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Thai Green Curry Chicken with Tom Yum Fried Rice +
-                                                                FREE Spicy
-                                                                Thai Cauliflower</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-group">
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">RABU</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Baked Chicken with BBQ Sauce and Caramelized Onion
-                                                                Pasta +
-                                                                FREE Cheesy Marinara Eggplant</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Fish Kabayaki with Japanese Brown Rice + FREE Corn
-                                                                Mayo</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">KAMIS</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Ayam Lodho with Lontong Beras Merah + FREE Tahu Opor
-                                                            </p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Buttermilk Chicken with Corn Frittata + FREE Coleslow
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-group">
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">JUM'AT</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Korean Gochujang Chicken with Korean Rice n Bean +
-                                                                FREE Odeng
-                                                            </p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Beef Quesadilas + FREE Potato Skins</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">SABTU</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Chicken Nanban with Japanese Fried Rice + FREE Kung
-                                                                Pao
-                                                                Cauliflower</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Baked Fish with Sweet Corn Salsa and Marinara Pasta +
-                                                                FREE
-                                                                Tortila Chips</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="">
-                                            <button type="button" class="button" data-bs-dismiss="modal">Order
-                                                Now</button>
-                                        </div>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-center">
-                        <img src="images/menu1.jpg" class="card-img-top" height="400px" alt="...">
-                        <h3 style="color:white"><b>Paket C</b></h3>
-                        <p style="color:white"><b>Rp.559.000</b></p>
-                        <div class="card-body">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                Detail
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                        <div class="modal-header">
-                                            <h5 class="modal-title col-md-12 col-sm-12" id="exampleModalLabel">Paket
-                                                C</h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="modal-body">
-                                                <div class="card-group">
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">SENIN</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Ayam Woku with Uduk Red Rice + FREE Bakwan Jagung
-                                                                Bites</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Gindara Cacciatore with Garlic Pasta + FREE
-                                                                Caramelized Onion
-                                                                Pizza</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">SELASA</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Fish Lodeh with Shallot Red Rice + FREE Martabak
-                                                                Telur</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Thai Green Curry Chicken with Tom Yum Fried Rice +
-                                                                FREE Spicy
-                                                                Thai Cauliflower</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-group">
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">RABU</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Baked Chicken with BBQ Sauce and Caramelized Onion
-                                                                Pasta +
-                                                                FREE Cheesy Marinara Eggplant</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Fish Kabayaki with Japanese Brown Rice + FREE Corn
-                                                                Mayo</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">KAMIS</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Ayam Lodho with Lontong Beras Merah + FREE Tahu Opor
-                                                            </p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Buttermilk Chicken with Corn Frittata + FREE Coleslow
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-group">
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">JUM'AT</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Korean Gochujang Chicken with Korean Rice n Bean +
-                                                                FREE Odeng
-                                                            </p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Beef Quesadilas + FREE Potato Skins</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title buttonMenu">SABTU</h5>
-                                                            <p class="card-text"><u>LUNCH</u></p>
-                                                            <p>Chicken Nanban with Japanese Fried Rice + FREE Kung
-                                                                Pao
-                                                                Cauliflower</p>
-                                                            <p class="card-text"><u>DINNER</u></p>
-                                                            <p>Baked Fish with Sweet Corn Salsa and Marinara Pasta +
-                                                                FREE
-                                                                Tortila Chips</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="">
-                                            <button type="button" class="button" data-bs-dismiss="modal">Order
-                                                Now</button>
-                                        </div>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <br>

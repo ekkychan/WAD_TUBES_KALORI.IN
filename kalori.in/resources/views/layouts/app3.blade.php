@@ -210,9 +210,6 @@
         margin: 4px 2px;
     }
 
-
-
-
     .footer-area {
         padding-top: 50px;
         padding-bottom: 0px;
