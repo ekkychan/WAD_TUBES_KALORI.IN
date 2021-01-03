@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-md bg-custom">
         <!-- Links -->
         <a class="navbar-brand" href="<?php echo e(url('/home')); ?>">
-            <img src="<?php echo e(asset('images/Kalori.in webfd.png')); ?>" width="120" height="35">
+            <img src="css/Kalori.in webf.png" width="120" height="35">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

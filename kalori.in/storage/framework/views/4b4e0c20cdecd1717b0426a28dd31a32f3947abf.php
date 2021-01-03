@@ -384,7 +384,7 @@
     <header class="top-navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="/admin">
+                <a class="navbar-brand" href="/home">
                     <img src="<?php echo e(asset('images/Kalori.in webfd.png')); ?>" alt="" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
