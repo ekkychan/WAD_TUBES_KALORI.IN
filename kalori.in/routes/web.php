@@ -21,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/detail', function () {
-    return view('Member.detail');
-});
+
 
 Auth::routes();
 
@@ -51,6 +49,8 @@ Route::middleware('auth')->group(function(){
     Route::delete('/deletecart/{id}',[CartController::class,'delete']);
     Route::get('/order/{id}',[OrderController::class, 'CreateOrder']);
     Route::post('/order/{id}/store', [OrderController::class, 'store'])->name('order.store');
+    Route::get('/profile',[HomeController::class, 'editprofile']);
+    Route::patch('/EditProfile/update', [HomeController::class, 'updateprofile'])->name('profile.update');
     Route::get('/bmi', function () {
         return view('Member.bmi');
     });

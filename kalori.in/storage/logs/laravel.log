@@ -6156,3 +6156,44 @@ Did you mean one of these?
 #51 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\server.php(21): require_once('E:\\\\WAD_TUBES_KA...')
 #52 {main}
 "} 
+[2021-01-03 22:41:19] local.ERROR: Call to undefined function post() {"exception":"[object] (Error(code: 0): Call to undefined function post() at E:\\WAD_TUBES_KALORI.IN\\kalori.in\outes\\web.php:40)
+[stacktrace]
+#0 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(422): Illuminate\\Routing\\RouteFileRegistrar->{closure}(Object(Illuminate\\Routing\\Router))
+#1 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(381): Illuminate\\Routing\\Router->loadRoutes(Object(Closure))
+#2 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(135): Illuminate\\Routing\\Router->group(Array, Object(Closure))
+#3 E:\\WAD_TUBES_KALORI.IN\\kalori.in\outes\\web.php(42): Illuminate\\Routing\\RouteRegistrar->group(Object(Closure))
+#4 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(422): Illuminate\\Routing\\RouteFileRegistrar->{closure}(Object(Illuminate\\Routing\\Router))
+#5 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(381): Illuminate\\Routing\\Router->loadRoutes(Object(Closure))
+#6 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(135): Illuminate\\Routing\\Router->group(Array, Object(Closure))
+#7 E:\\WAD_TUBES_KALORI.IN\\kalori.in\outes\\web.php(58): Illuminate\\Routing\\RouteRegistrar->group(Object(Closure))
+#8 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): require('E:\\\\WAD_TUBES_KA...')
+#9 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(424): Illuminate\\Routing\\RouteFileRegistrar->register('E:\\\\WAD_TUBES_KA...')
+#10 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(381): Illuminate\\Routing\\Router->loadRoutes('E:\\\\WAD_TUBES_KA...')
+#11 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(135): Illuminate\\Routing\\Router->group(Array, 'E:\\\\WAD_TUBES_KA...')
+#12 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\app\\Providers\\RouteServiceProvider.php(48): Illuminate\\Routing\\RouteRegistrar->group('E:\\\\WAD_TUBES_KA...')
+#13 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\RouteServiceProvider->App\\Providers\\{closure}()
+#14 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#17 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(610): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#18 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(120): Illuminate\\Container\\Container->call(Object(Closure))
+#19 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(45): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#20 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->Illuminate\\Foundation\\Support\\Providers\\{closure}()
+#21 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#22 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#23 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#24 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(610): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#25 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\ServiceProvider.php(113): Illuminate\\Container\\Container->call(Object(Closure))
+#26 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(872): Illuminate\\Support\\ServiceProvider->callBootedCallbacks()
+#27 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(850): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#28 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 23)
+#29 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): array_walk(Array, Object(Closure))
+#30 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#31 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#32 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(152): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#33 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(136): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#34 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 E:\\WAD_TUBES_KALORI.IN\\kalori.in\\server.php(21): require_once('E:\\\\WAD_TUBES_KA...')
+#37 {main}
+"} 
