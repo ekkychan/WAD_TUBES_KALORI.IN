@@ -95,7 +95,7 @@ class OrderController extends Controller
                 'alamat'=>$cart->alamat,
                 'jumlah'=>$cart->jumlah,
                 'request'=>$cart->request,
-                'status'=>'Menunggu Pembayaran',
+                'status'=>'Pembayaran berhasil',
                 'created_at'=>Carbon::now(),
                 'updated_at'=>Carbon::now()
             ]);

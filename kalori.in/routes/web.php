@@ -32,10 +32,13 @@ Route::middleware('auth')->group(function(){
         Route::get('/admin', [MenuController::class, 'index']);
         Route::delete('/deletemenu/{id}', [MenuController::class, 'hapusmenu']);
         Route::delete('/deleteuser/{id}', [MenuController::class, 'hapususer']);
+        Route::delete('/deleteinfo/{id}', [MenuController::class, 'hapusinfo']);
         Route::get('/EditMenu/{id}', [MenuController::class, 'edit']);
         Route::get('/EditUser/{id}', [MenuController::class, 'edituser']);
+        Route::get('/EditInfo/{id}', [MenuController::class, 'editinfo']);
         Route::patch('/EditMenu/{id}/update', [MenuController::class, 'update'])->name('menu.update');
         Route::patch('/EditUser/{id}/update', [MenuController::class, 'updateuser'])->name('user.update');
+        Route::patch('/EditInfo/{id}/update', [MenuController::class, 'updateinfo'])->name('info.update');
         Route::get('/AddInformation', [MenuController::class, 'make']);
         Route::post('/Addinfo', [MenuController::class, 'addinfo'])->name('info.add');
 

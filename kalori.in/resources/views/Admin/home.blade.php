@@ -74,6 +74,40 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <h2 class="text-center">List Info/Article</h2>
+        <div class="col-10 mt-5">
+            <div class="tabel">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center" scope="col">No</th>
+                            <th class="text-center" scope="col">Judul</th>
+                            <th class="text-center" scope="col">Tanggal Post</th>
+                            <th class="text-center" scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($infos as $index=>$info)
+                        <tr class="text-center">
+                            <td>{{$index+1}}</td>
+                            <td>{{$info->judul}}</td>
+                            <td>{{date('j F',strtotime($info->created_at))}}</td>
+                            <td>
+                                <form action="/deleteinfo/{{$info->id}}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <a href="/EditInfo/{{$info->id}}" class="btn btn-primary">Edit</a>
+                                    <button href="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                    @endforeach
+                </table>
+            </div>
+        </div>
+    </div>
     <br>
     <div class="row justify-content-center">
         <h2 class="text-center">List Order</h2>

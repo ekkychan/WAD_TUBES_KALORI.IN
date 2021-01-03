@@ -56,6 +56,10 @@ class MenuController extends Controller
         User::where ('id',$id)->delete();
         return redirect('/admin');
     }
+    public function hapusinfo($id){
+        Information::where ('id',$id)->delete();
+        return redirect('/admin');
+    }
     public function edituser($id){
         $user = User::find($id);
         return view('Admin.EditUser',compact('user'));
@@ -64,7 +68,8 @@ class MenuController extends Controller
         $menus = Menu::all();
         $users = User::all();
         $orders = Order::all();
-        return view('Admin.home', compact('menus','users','orders'));
+        $infos = Information::all();
+        return view('Admin.home', compact('menus','users','orders','infos'));
     }
 
     public function edit($id){
@@ -128,10 +133,40 @@ class MenuController extends Controller
         ]);
         return redirect('/admin');
     }
+    public function editinfo($id){
+        $info = Information::find($id);
+        return view('Admin.EditInfo', compact('info'));
+    }
+    public function updateinfo($id,Request $request){
+        if($request->img_path == null){
+            Information::where('id',$id)->update([
+                'user_id'=>Auth::user()->id,
+                'judul'=>$request->judul,
+                'header'=>$request->header,
+                'isi'=>$request->isi,
+                'created_at'=>Carbon::now(),
+                'updated_at'=>Carbon::now()
+            ]); 
+        }else{
+            $file = time().'.'.$request->img_path->extension();
+            $request->img_path->move(public_path('images/info/'),$file);
+            Information::where('id',$id)->update([
+                'user_id'=>Auth::user()->id,
+                'judul'=>$request->judul,
+                'header'=>$request->header,
+                'isi'=>$request->isi,
+                'img_path'=>$file,
+                'created_at'=>Carbon::now(),
+                'updated_at'=>Carbon::now()
+            ]); 
+            
+        }
+            return redirect('/admin');  
+    }
     public function lihat($id){
         $info = Information::find($id);
         return view('Member.detail', compact('info'));
     }
-
+    
 
 }
