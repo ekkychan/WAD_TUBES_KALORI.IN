@@ -3,6 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
+    <title>Kalori.in</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,8 +25,8 @@
 <body>
     <nav class="navbar navbar-expand-md bg-custom">
         <!-- Links -->
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="css/Kalori.in webf.png" width="120" height="35">
+        <a class="navbar-brand" href="{{ url('/home') }}">
+            <img src="{{ asset('images/Kalori.in webfd.png')}}" width="120" height="35">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -47,28 +48,19 @@
         @else
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/admin">Admin</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">BMI Calculator</a>
+                <a class="nav-link" href="/home">Home</a>
             </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="">Activity</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/AddMenu">Add Menu</a>
             </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="">Nutrion</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/AddInformation">Add Information</a>
             </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="">Information</a>
-            </li>
+
         </ul>
-        </div>
-        <div class="nav-item ">
-            <a class="nav-link" href=""><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart3"
-                    fill="rgba(255, 255, 255, 1)" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                </svg></a>
         </div>
         <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -86,7 +78,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
                 <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a></li>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -100,7 +92,46 @@
     <div class="container">
         @yield('template')
     </div>
+    <!-- Start Footer -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="footer-area bg-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3>About Us</h3>
+                    <p>Perusahaan Catering No.1 Indonesia.</p>
+                </div>
 
+                <div class="col-lg-3 col-md-6">
+                    <h3>Contact information</h3>
+                    <p class="lead">Jalan Mawar No.6 Jakarta</p>
+                    <p class="lead"><a href="#">+62 189 835 494</a></p>
+                    <p><a href="#"> info@kaloriin.com</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>Opening hours</h3>
+                    <p><span class="text-color">Monday: </span>Closed</p>
+                    <p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
+                    <p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
+                    <p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="company-name">All Rights Reserved. &copy; 2020 <a href="#">Kalori.in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

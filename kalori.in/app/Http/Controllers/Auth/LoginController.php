@@ -55,6 +55,6 @@ protected function authenticated($request, $user)
             return redirect()->intended('/admin');
         }
 
-        return redirect()->intended($redirectTo);
+        return redirect()->intended('/home');
     }
 }

@@ -1,6 +1,104 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+<link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'>
+<title>Kalori.in</title>
+  <style type="text/css">
+    #tales {
+    width: 65%;
+    height: 355px;
+	  }
+    .bg-custom {
+            background: rgba(115, 178, 163, 1);
+        }
+
+    .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 1);
+        }
+    h2 {
+            color: rgba(115, 178, 163, 1)
+    }
+    .button {
+            background-color: rgba(115, 178, 163, 1); 
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+      }
+      .buttonMenu {
+            background-color: rgba(115, 178, 163, 1); 
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 15px 65px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            position: absolute;
+            left: 264px;
+            background: #73B2A3;
+            border-radius: 15px;
+      }
+      /* Welcome To kalori.in */
+      .buttonSign {
+            background-color: rgba(115, 178, 163, 1); 
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 80px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+      }
+      .buttonk {
+            background-color: rgba(255, 255, 255, 1); 
+            border: #73b2a3 1px solid;
+            border-radius: 10px;
+            color: rgba(115, 178, 163, 1);
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+      }
+      .jumbotronk {
+              background: url("images/bglanding.jpg");
+              background-size: cover;
+              color: #faf0f0;           
+      }   
+      .kata{
+position: absolute;
+width: 500px;
+height: 350px;
+left: 35px;
+top: 100px;
+
+font-family: Bungee Outline;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 43px;
+text-align: center;
+
+color: #C81F38;
+
+
+/*backdrop-filter: blur(4px);*/
+/* Note: backdrop-filter has minimal browser support */
+transform: rotate(-8.39deg);
+}       
+  </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
