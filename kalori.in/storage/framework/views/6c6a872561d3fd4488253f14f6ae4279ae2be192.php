@@ -25,27 +25,27 @@
 <body>
     <nav class="navbar navbar-expand-md bg-custom">
         <!-- Links -->
-        <a class="navbar-brand" href="{{ url('/home') }}">
-            <img src="{{ asset('images/Kalori.in webfd.png')}}" width="120" height="35">
+        <a class="navbar-brand" href="<?php echo e(url('/home')); ?>">
+            <img src="<?php echo e(asset('images/Kalori.in webfd.png')); ?>" width="120" height="35">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
             <span class="navbar-toggler-icon"></span>
         </button>
-        @guest
-        @if (Route::has('login'))
+        <?php if(auth()->guard()->guest()): ?>
+        <?php if(Route::has('login')): ?>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
         </li>
-        @endif
+        <?php endif; ?>
 
-        @if (Route::has('register'))
+        <?php if(Route::has('register')): ?>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
         </li>
-        @endif
-        @else
+        <?php endif; ?>
+        <?php else: ?>
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/admin">Admin</a>
@@ -73,24 +73,26 @@
                     <path fill-rule="evenodd"
                         d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
                 </svg>
-                {{ Auth::user()->name }}
+                <?php echo e(Auth::user()->name); ?>
+
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                <li><a class="dropdown-item" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        <?php echo e(__('Logout')); ?>
+
                     </a></li>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
+                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                    <?php echo csrf_field(); ?>
                 </form>
             </ul>
         </div>
-        @endguest
+        <?php endif; ?>
     </nav>
     </nav>
     <div class="container">
-        @yield('template')
+        <?php echo $__env->yieldContent('template'); ?>
     </div>
     <!-- Start Footer -->
     <br>
@@ -146,4 +148,4 @@
     -->
 </body>
 
-</html>
+</html><?php /**PATH E:\WAD_TUBES_KALORI.IN\kalori.in\resources\views/layouts/app2.blade.php ENDPATH**/ ?>

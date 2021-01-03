@@ -25,9 +25,12 @@ Route::get('/profile', function () {
     return view('Member.profile');
 });
 
+
+
 Auth::routes();
 
 Route::middleware('auth')->group(function(){
+
     Route::middleware('role:Admin')->group(function(){
         Route::get('/AddMenu', [MenuController::class, 'create']);
         Route::post('/AddMenu/store', [MenuController::class, 'store'])->name('menu.store');
