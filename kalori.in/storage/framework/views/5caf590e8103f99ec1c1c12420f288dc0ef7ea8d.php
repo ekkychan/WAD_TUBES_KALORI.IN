@@ -142,6 +142,12 @@
                         <td class="text-center">Rp. <?php echo e(number_format($harga,0,",",".")); ?></td>
                         <td class="text-center"><?php echo e($order->request); ?></td>
                         <td class="text-center"><?php echo e($order->status); ?></td>
+                        <td>
+                            <form action="/editOrder/<?php echo e($order->id); ?>" method="post">
+                                <?php echo csrf_field(); ?>
+                                <button href="submit" class="btn btn-success">Terima</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>

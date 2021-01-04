@@ -71,9 +71,12 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editOrder($id)
     {
-        //
+        Order::where('id',$id)->update([
+            'status'=>'Pesanan diterima',
+        ]);
+        return redirect('/admin');
     }
 
     /**

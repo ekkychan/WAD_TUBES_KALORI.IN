@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function(){
         Route::patch('/EditInfo/{id}/update', [MenuController::class, 'updateinfo'])->name('info.update');
         Route::get('/AddInformation', [MenuController::class, 'make']);
         Route::post('/Addinfo', [MenuController::class, 'addinfo'])->name('info.add');
+        Route::post('/editOrder/{id}', [OrderController::class, 'editOrder']);
 
     });
     Route::get('/home',[HomeController::class, 'index']);

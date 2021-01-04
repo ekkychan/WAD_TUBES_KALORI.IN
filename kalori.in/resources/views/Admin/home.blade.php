@@ -142,6 +142,12 @@
                         <td class="text-center">Rp. {{number_format($harga,0,",",".")}}</td>
                         <td class="text-center">{{$order->request}}</td>
                         <td class="text-center">{{$order->status}}</td>
+                        <td>
+                            <form action="/editOrder/{{$order->id}}" method="post">
+                                @csrf
+                                <button href="submit" class="btn btn-success">Terima</button>
+                            </form>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
